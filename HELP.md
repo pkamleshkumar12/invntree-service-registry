@@ -26,3 +26,11 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+For Development, you can use the `mvn` command to generate a new project with the correct inheritance structure.
+./mvnw clean package
+java -jar target/service-registry-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+
+For Production, you can use the `mvn` command to generate a new project with the correct inheritance structure.
+./mvnw clean package
+java -jar target/service-registry-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+
